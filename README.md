@@ -1,5 +1,5 @@
 # creativa
 
 ## Integrantes
-- El gordo
+- Abraham
 - Mei
