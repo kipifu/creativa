@@ -3,3 +3,4 @@
 ## Integrantes
 - Abraham
 - Mei
+- Gino
