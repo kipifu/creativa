@@ -3,4 +3,4 @@
 ## Integrantes
 - El gordo
 - Mei
-Gino
+- Gino
