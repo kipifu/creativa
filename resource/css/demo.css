@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
+
+:root {
+  --clr-black: #000;
+
+  --clr-1: #FF597B;
+  --clr-2: #FF8E9E;
+  --clr-3: #F9B5D0;
+  --clr-4: #EEEEEE;
+
+  --font-corrida: 'Dancing Script', cursive;
+  --font-imprenta: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  gap: 2em;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#container-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: var(--font-corrida);
+  font-weight: 200;
+  color: var(--clr-4);
+  font-size: 4em;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: var(--font-imprenta);
+  color: var(--clr-black);
+  font-size: 5.5em;
+  font-weight: 800;
+}
+
+p {
+  font-size: 1.3em;
+  text-align: justify;
+  margin-top: 3em;
+  font-family: var(--font-imprenta);
+  font-weight: 300;
+  color: var(--clr-4);
+}
+
+#container-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-image img {
+  width: 25em;
+}
