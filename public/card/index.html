@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie</title>
-  <link rel="stylesheet" href="../../resource/css/movie.css">
 </head>
 <style>
     * {
@@ -14,15 +13,16 @@
 }
 
 body {
-  background-color: var(--clr-black);
   color: var(--clr-white);
+  background-color: black;
+   background-size: 100%;
+  background-image: url(img/portada3.jpg);
+  font-family: 'Big Shoulders Display', sans-serif;
 }
 .container{
     display: grid;
   height: 100vh;
   grid-template-columns: 100%;
-    /* background-image: url("https://picsum.photos/id/192/1200/1000"); */
-    background-color: black;
 }
 
 .header {
@@ -34,22 +34,29 @@ body {
 }
 .card-header{
     display: flex;
-    gap: 0.5rem;
+    gap: 0.8rem;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 .title-huddle {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 0.5rem;
+    color: #fff;
 }
 .huddle-block {
     display: block;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .description{
-    width: 80%;
-    font-size: 1.5rem;
+    width: 85%;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.1rem;
+    font-style: italic;
+    font-weight: bold;
 }
 .btn {
     font-weight: bold;
@@ -85,18 +92,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    grid-template-columns: 100%;
+    grid-template-columns: 95%;
 
 }
 .content-gallery{
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 18%));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
 }
 .container-imagen img {
-   
+   border-radius: 0.5rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -104,19 +111,83 @@ body {
    height: 40vh;
    
     object-fit:cover;}
+
+ 
+@media (min-width: 599px) and (max-width: 850px){
+    .card-header {
+        margin-top: 0.5rem;
+    }
+    .title-huddle {
+        font-size: 2.5rem;
+        text-align: center;
+
+}
+.huddle-block {
+    font-size: 2.5rem;
+}
+.description {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+
+}
+.card-header {
+   
+    align-items: center;
+}
+.content-gallery {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+}
+.gallery {
+   
+    height: 60vh;
+}
+   
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px){
+   
+.card-header {
+    
+    margin-top: 0.5rem;
+}
+    .title-huddle {
+
+font-size: 2.5rem;
+text-align: center;
+
+}
+.huddle-block {
+    font-size: 2.5rem;
+}
+.description {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+
+}
+.card-header {
+   
+    align-items: center;
+}
+.content-gallery {
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+}
+
+}
 </style>
 <body>
   <header class="container">
     <section class="header">
         <div class="card-header">
             <h2 class="title-huddle">
-                Nicolas
-                <span class="huddle-block">y Maria</span>
+                NICOLAS
+                <span class="huddle-block">Y MARIA</span>
               </h2>
-              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, laborum et repellendus maiores quo architecto aut
-                dolor sit amet, consectetur adipisicing elit. Quas, laborum et repellendus maiore
+              <p class="description">Eres mi luz en la oscuridad y mi sol en los días grises. No puedo imaginar mi vida sin ti, mi amor eterno. Te amo con todo mi corazón y mi alma y te prometo amarte incondicionalmente, siempre y para siempre. Eres mi razón de ser y mi todo en la vida. Juntos podemos conquistar el mundo y hacerlo aún más hermoso.
               </p>
-    <button class="btn btn-dark-cyan">LOVE</button>
+    <button class="btn btn-dark-cyan">NUESTRAS FOTOS</button>
         </div>
     </section>
     <section class="gallery">
@@ -133,6 +204,13 @@ body {
               <div class="container-imagen">
                 <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"  alt="">
               </div> 
+              <div class="container-imagen">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"  alt="">
+              </div>
+              <div class="container-imagen">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"  alt="">
+              </div>
+             
           </section>
           
         </div>
