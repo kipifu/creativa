@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Varela+Round&display=swap');
+
 :root {
   --clr-gray: #888585;
 
   --clr-black: #000;
   --clr-white: #fff;
+
+  --ff-primary: 'Bayon', sans-serif;
+  --ff-secondary: 'Varela Round', sans-serif;
 }
 
 * {
@@ -13,6 +18,7 @@
 body {
   background-color: var(--clr-black);
   color: var(--clr-white);
+  font-family: var(--ff-primary);
 }
 
 main {
@@ -22,20 +28,23 @@ main {
 
 /* ===== FRONT PAGE ===== */
 .front-page {
-  height: 80vh;
+  height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 60%);
+  grid-template-columns: 100%;
   background-image: url("https://picsum.photos/id/192/1200/1000");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  padding: 0 2em 0 2em;
+  gap: 2em;
 }
 
 .presentation {
   display: grid;
+  grid-template-columns: repeat(auto-fit, 60%);
   align-content: center;
+  justify-items: flex-start;
   gap: 1em;
-  padding: 2em;
 }
 
 .title {
@@ -53,43 +62,62 @@ main {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 }
 
-
-/* ===== CONTENT ===== */
-.content {
-  display: grid;
-  justify-items: center;
-  gap: 5em;
+.btn {
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.5em;
+  font-weight: 900;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 10em;
 }
 
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* ===== PREVIEW ===== */
 .preview {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  display: grid;
 }
 
 .preview-title {
   text-transform: capitalize;
   font-size: 2em;
   font-weight: 600;
+  color: var(--clr-black);
 }
 
 .preview-card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 19%);
+  grid-template-columns: repeat(auto-fit, 16%);
   justify-content: space-between;
 }
 
 .card {
   background-color: var(--clr-gray);
-  height: 150px;
+  height: 300px;
   border-radius: 0.5em;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .presentation {
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+
+  .preview-card {
+    grid-template-columns: repeat(auto-fit, 30%);
+    gap: 1em;
+  }
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
-  .content {
-    gap: 3em;
+  .presentation {
+    grid-template-columns: 100%;
+    justify-items: center;
   }
 
   .preview-card {
